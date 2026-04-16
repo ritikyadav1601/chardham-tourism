@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --saffron: #FF6B00;
+    --saffron-light: #FF8C38;
+    --saffron-dark: #CC5500;
+    --gold: #D4AF37;
+    --gold-light: #F0D060;
+    --cream: #FFF8F0;
+    --brown: #4A2C0A;
+    --forest: #2D5016;
+    --sky: #1B6FA8;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Georgia', serif;
+    background-color: #FFFDF9;
+    color: #2C1810;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .font-display { font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
+  .text-saffron { color: var(--saffron); }
+  .text-gold { color: var(--gold); }
+  .bg-saffron { background-color: var(--saffron); }
+  .bg-gold { background-color: var(--gold); }
+  .bg-cream { background-color: var(--cream); }
+  .border-saffron { border-color: var(--saffron); }
+  .border-gold { border-color: var(--gold); }
+
+  .mandala-bg {
+    background-image: radial-gradient(circle at 20% 50%, rgba(255, 107, 0, 0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 40%);
+  }
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(74, 44, 10, 0.5) 10%, rgba(0,0,0,0.4) 10%);
+  }
+  .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(255, 107, 0, 0.15); }
+
+  .btn-saffron {
+    background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-dark) 100%);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  .btn-saffron:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, #B8960C 100%);
+    color: #2C1810;
+    transition: all 0.3s ease;
+  }
+  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4); }
+
+  .section-divider { background: linear-gradient(90deg, transparent, var(--gold), transparent); height: 1px; }
+
+  .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--saffron);
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+  .pilgrimage-card { background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.85) 100%); }
+  .star-rating::before { content: '★★★★★'; color: var(--gold); letter-spacing: 2px; }
 }
