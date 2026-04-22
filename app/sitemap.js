@@ -29,14 +29,3 @@ export default function sitemap() {
 
   return [...staticPages, ...destPages, ...blogPages];
 }
-EOF
-
-# Robots.txt
-cat > /home/claude/char-dham/app/robots.js << 'EOF'
-export default function robots() {
-  return {
-    rules: { userAgent: '*', allow: '/', disallow: '/private/' },
-    sitemap: 'https://chardhamyatra.in/sitemap.xml',
-    host: 'https://chardhamyatra.in',
-  };
-}
