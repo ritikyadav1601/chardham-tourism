@@ -84,7 +84,7 @@ export default function CharDhamPage() {
                     <Link href={"/char-dham-yatra/" + dest.slug} className="btn-saffron px-4 py-2 rounded-lg text-sm font-medium">
                       Learn More
                     </Link>
-                    <a href="https://wa.me/919876543210" className="bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                    <a href="https://wa.me/919068403363" className="bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                       Enquire
                     </a>
                   </div>

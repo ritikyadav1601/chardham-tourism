@@ -42,7 +42,7 @@ export default function HomePage() {
             <Link href="/char-dham-yatra" className="btn-saffron px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2">
               Explore Packages <ChevronRight size={20} />
             </Link>
-            <a href="https://wa.me/919876543210" className="bg-white/15 backdrop-blur hover:bg-white/25 border border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2 transition-all">
+            <a href="https://wa.me/919068403363" className="bg-white/15 backdrop-blur hover:bg-white/25 border border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2 transition-all">
               WhatsApp Us
             </a>
           </div>

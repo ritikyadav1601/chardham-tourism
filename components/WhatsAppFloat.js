@@ -14,7 +14,7 @@ export default function WhatsAppFloat() {
         </div>
       )}
       <a
-        href="https://wa.me/919876543210?text=Namaste! I want to know more about Char Dham Yatra packages."
+        href="https://wa.me/919068403363?text=Namaste! I want to know more about Char Dham Yatra packages."
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110"

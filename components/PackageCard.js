@@ -77,7 +77,7 @@ export default function PackageCard({ pkg, showDetails = false }) {
           </div>
           <div className="flex gap-2">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919068403363"
               className="px-3 py-2 bg-green-50 hover:bg-green-100 text-green-700 rounded-lg text-xs font-medium border border-green-200 transition-colors"
             >
               Enquire
